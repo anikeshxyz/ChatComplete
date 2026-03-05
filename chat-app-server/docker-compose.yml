@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  mysqldb:
+    image: mysql:8.0
+    container_name: chat-app-mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: chat_db
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  rabbitmq:
+    image: rabbitmq:3.13-management # includes management UI + STOMP plugin
+    container_name: chat-app-rabbitmq
+    restart: always
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    ports:
+      - "5672:5672" # AMQP (Spring AMQP / spring-boot-starter-amqp)
+      - "61613:61613" # STOMP (Spring WebSocket relay)
+      - "15672:15672" # Management UI  →  http://localhost:15672
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+      - rabbitmq_logs:/var/log/rabbitmq
+    # Enable STOMP plugin on container startup
+    command: >
+      bash -c "rabbitmq-plugins enable rabbitmq_stomp rabbitmq_management --offline &&
+               rabbitmq-server"
+    healthcheck:
+      test: [ "CMD", "rabbitmq-diagnostics", "ping" ]
+      interval: 15s
+      timeout: 10s
+      retries: 6
+
+  redis:
+    image: redis:7.0-alpine
+    container_name: chat-app-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --save 60 1 --loglevel warning
+
+volumes:
+  db_data:
+  rabbitmq_data:
+  rabbitmq_logs:
+  redis_data:

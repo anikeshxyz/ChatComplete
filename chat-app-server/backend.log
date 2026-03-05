@@ -1,0 +1,128 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------------< [0;36mcom.chatapp:chat-application[0;1m >--------------------[m
+[[1;34mINFO[m] [1mBuilding chat-application 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m]   from pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m>>> [0;32mspring-boot:3.3.3:run[m [1m(default-cli)[0;1m > [0;1mtest-compile[m @ [36mchat-application[0;1m >>>[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mresources:3.3.1:resources[m [1m(default-resources)[m @ [36mchat-application[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 0 resource from src/main/resources to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcompiler:3.13.0:compile[m [1m(default-compile)[m @ [36mchat-application[0;1m ---[m
+[[1;34mINFO[m] Recompiling the module because of [1mchanged source code[m.
+[[1;34mINFO[m] Compiling 57 source files with javac [debug parameters release 17] to target/classes
+[[1;34mINFO[m] /home/aahan/Documents/chat-app-server/src/main/java/com/chat/application/service/impl/JwtService.java: /home/aahan/Documents/chat-app-server/src/main/java/com/chat/application/service/impl/JwtService.java uses unchecked or unsafe operations.
+[[1;34mINFO[m] /home/aahan/Documents/chat-app-server/src/main/java/com/chat/application/service/impl/JwtService.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mresources:3.3.1:testResources[m [1m(default-testResources)[m @ [36mchat-application[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /home/aahan/Documents/chat-app-server/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcompiler:3.13.0:testCompile[m [1m(default-testCompile)[m @ [36mchat-application[0;1m ---[m
+[[1;34mINFO[m] Recompiling the module because of [1mchanged dependency[m.
+[[1;34mINFO[m] Compiling 1 source file with javac [debug parameters release 17] to target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m<<< [0;32mspring-boot:3.3.3:run[m [1m(default-cli)[0;1m < [0;1mtest-compile[m @ [36mchat-application[0;1m <<<[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot:3.3.3:run[m [1m(default-cli)[m @ [36mchat-application[0;1m ---[m
+[[1;34mINFO[m] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.3)
+
+2026-02-08T17:12:42.241+05:30  INFO 59356 --- [chat-application] [  restartedMain] com.chat.application.ChatApplication     : Starting ChatApplication using Java 17.0.17 with PID 59356 (/home/aahan/Documents/chat-app-server/target/classes started by aahan in /home/aahan/Documents/chat-app-server)
+2026-02-08T17:12:42.243+05:30  INFO 59356 --- [chat-application] [  restartedMain] com.chat.application.ChatApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-02-08T17:12:42.279+05:30  INFO 59356 --- [chat-application] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-08T17:12:42.280+05:30  INFO 59356 --- [chat-application] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-08T17:12:42.823+05:30  INFO 59356 --- [chat-application] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-08T17:12:42.874+05:30  INFO 59356 --- [chat-application] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
+2026-02-08T17:12:43.341+05:30  INFO 59356 --- [chat-application] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
+2026-02-08T17:12:43.352+05:30  INFO 59356 --- [chat-application] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-08T17:12:43.353+05:30  INFO 59356 --- [chat-application] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2026-02-08T17:12:43.382+05:30  INFO 59356 --- [chat-application] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-08T17:12:43.383+05:30  INFO 59356 --- [chat-application] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1102 ms
+2026-02-08T17:12:43.527+05:30  INFO 59356 --- [chat-application] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-08T17:12:43.598+05:30  INFO 59356 --- [chat-application] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-02-08T17:12:43.635+05:30  INFO 59356 --- [chat-application] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-08T17:12:43.869+05:30  INFO 59356 --- [chat-application] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-08T17:12:43.888+05:30  INFO 59356 --- [chat-application] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-08T17:12:44.012+05:30  INFO 59356 --- [chat-application] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e7191da
+2026-02-08T17:12:44.013+05:30  INFO 59356 --- [chat-application] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-08T17:12:44.059+05:30  WARN 59356 --- [chat-application] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-08T17:12:44.752+05:30  INFO 59356 --- [chat-application] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-08T17:12:44.803+05:30  INFO 59356 --- [chat-application] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-08T17:12:45.058+05:30  INFO 59356 --- [chat-application] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-08T17:12:45.359+05:30  INFO 59356 --- [chat-application] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailService
+2026-02-08T17:12:45.494+05:30  WARN 59356 --- [chat-application] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-08T17:12:46.086+05:30  INFO 59356 --- [chat-application] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-08T17:12:46.112+05:30  INFO 59356 --- [chat-application] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path '/'
+2026-02-08T17:12:46.113+05:30  INFO 59356 --- [chat-application] [  restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2026-02-08T17:12:46.114+05:30  INFO 59356 --- [chat-application] [  restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@11d3ad57]]
+2026-02-08T17:12:46.114+05:30  INFO 59356 --- [chat-application] [  restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2026-02-08T17:12:46.121+05:30  INFO 59356 --- [chat-application] [  restartedMain] com.chat.application.ChatApplication     : Started ChatApplication in 4.109 seconds (process running for 4.408)
+2026-02-08T17:13:05.604+05:30  INFO 59356 --- [chat-application] [nio-3030-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-08T17:13:05.604+05:30  INFO 59356 --- [chat-application] [nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-08T17:13:05.606+05:30  INFO 59356 --- [chat-application] [nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+No Authorization header found
+Hibernate: select u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `users` u1_0 where u1_0.`username`=? or u1_0.`email`=? or u1_0.`phone_number`=?
+Hibernate: select as1_0.`id`,as1_0.`created_at`,as1_0.`token`,u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `sessions` as1_0 left join `users` u1_0 on u1_0.`id`=as1_0.`user_id` where as1_0.`user_id`=?
+Hibernate: select as1_0.`id`,as1_0.`created_at`,as1_0.`token`,as1_0.`user_id` from `sessions` as1_0 where as1_0.`token`=?
+Hibernate: delete from `sessions` where `id`=?
+Hibernate: update `users` set `created_at`=?,`email`=?,`first_name`=?,`status`=?,`is_logged_in`=?,`last_name`=?,`password`=?,`phone_number`=?,`profile_picture`=?,`role`=?,`token`=?,`username`=? where `id`=?
+2026-02-08T17:13:05.909+05:30 ERROR 59356 --- [chat-application] [nio-3030-exec-1] c.c.a.service.impl.UserServiceImpl       : Wrong password for user: testuser_curl@example.com
+2026-02-08T17:13:05.940+05:30  WARN 59356 --- [chat-application] [nio-3030-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.chat.application.exception.InvalidPasswordException: Password is invalid]
+No Authorization header found
+Hibernate: select u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `users` u1_0 where u1_0.`username`=? or u1_0.`email`=? or u1_0.`phone_number`=?
+Hibernate: select as1_0.`id`,as1_0.`created_at`,as1_0.`token`,u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `sessions` as1_0 left join `users` u1_0 on u1_0.`id`=as1_0.`user_id` where as1_0.`user_id`=?
+2026-02-08T17:13:20.978+05:30 ERROR 59356 --- [chat-application] [nio-3030-exec-2] c.c.a.service.impl.UserServiceImpl       : Wrong password for user: testuser_curl
+2026-02-08T17:13:20.979+05:30  WARN 59356 --- [chat-application] [nio-3030-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.chat.application.exception.InvalidPasswordException: Password is invalid]
+2026-02-08T17:13:46.099+05:30  INFO 59356 --- [chat-application] [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+No Authorization header found
+Hibernate: select u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `users` u1_0 where u1_0.`username`=? or u1_0.`email`=? or u1_0.`phone_number`=?
+Hibernate: select as1_0.`id`,as1_0.`created_at`,as1_0.`token`,u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `sessions` as1_0 left join `users` u1_0 on u1_0.`id`=as1_0.`user_id` where as1_0.`user_id`=?
+Hibernate: select u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `users` u1_0 where u1_0.`username`=?
+2026-02-08T17:16:01.866+05:30  WARN 59356 --- [chat-application] [nio-3030-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+No Authorization header found
+Hibernate: select u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `users` u1_0 where u1_0.`username`=?
+Hibernate: select as1_0.`id`,as1_0.`created_at`,as1_0.`token`,u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `sessions` as1_0 left join `users` u1_0 on u1_0.`id`=as1_0.`user_id` where as1_0.`user_id`=?
+2026-02-08T17:16:35.587+05:30 ERROR 59356 --- [chat-application] [nio-3030-exec-4] c.c.a.service.impl.UserServiceImpl       : User with this username already exists
+2026-02-08T17:16:35.588+05:30  WARN 59356 --- [chat-application] [nio-3030-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.chat.application.exception.UserNameAlreadyExistsException: User with this username already exists]
+No Authorization header found
+Hibernate: select u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `users` u1_0 where u1_0.`username`=?
+Hibernate: select u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `users` u1_0 where u1_0.`phone_number`=?
+Hibernate: select u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `users` u1_0 where u1_0.`email`=?
+Hibernate: select as1_0.`id`,as1_0.`created_at`,as1_0.`token`,u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `sessions` as1_0 left join `users` u1_0 on u1_0.`id`=as1_0.`user_id` where as1_0.`user_id`=?
+2026-02-08T17:16:41.725+05:30 ERROR 59356 --- [chat-application] [nio-3030-exec-5] c.c.a.service.impl.UserServiceImpl       : User with this email already exists
+2026-02-08T17:16:41.726+05:30  WARN 59356 --- [chat-application] [nio-3030-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.chat.application.exception.EmailAlreadyExistsException: User with this email already exists]
+No Authorization header found
+Hibernate: select u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `users` u1_0 where u1_0.`username`=?
+Hibernate: select u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `users` u1_0 where u1_0.`phone_number`=?
+Hibernate: select u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `users` u1_0 where u1_0.`email`=?
+Hibernate: insert into `users` (`created_at`,`email`,`first_name`,`status`,`is_logged_in`,`last_name`,`password`,`phone_number`,`profile_picture`,`role`,`token`,`username`) values (?,?,?,?,?,?,?,?,?,?,?,?)
+No Authorization header found
+Hibernate: select u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `users` u1_0 where u1_0.`username`=? or u1_0.`email`=? or u1_0.`phone_number`=?
+Hibernate: select as1_0.`id`,as1_0.`created_at`,as1_0.`token`,u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `sessions` as1_0 left join `users` u1_0 on u1_0.`id`=as1_0.`user_id` where as1_0.`user_id`=?
+Hibernate: select u1_0.`id`,u1_0.`created_at`,u1_0.`email`,u1_0.`first_name`,u1_0.`status`,u1_0.`is_logged_in`,u1_0.`last_name`,u1_0.`password`,u1_0.`phone_number`,u1_0.`profile_picture`,u1_0.`role`,u1_0.`token`,u1_0.`username` from `users` u1_0 where u1_0.`username`=?
+2026-02-08T17:17:04.853+05:30  WARN 59356 --- [chat-application] [nio-3030-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authentication.BadCredentialsException: Bad credentials]
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  24:42 min
+[[1;34mINFO[m] Finished at: 2026-02-08T17:37:20+05:30
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.springframework.boot:spring-boot-maven-plugin:3.3.3:run[m [1m(default-cli)[m on project [36mchat-application[m: [1;31mProcess terminated with exit code: 137[m -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

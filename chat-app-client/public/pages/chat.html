@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <title>Chats page</title>
+</head>
+
+<body>
+    <section id="container">
+        <div class="chat-box">
+            <div class="chat-description-container">
+                <input type="checkbox" id="chek">
+                <div class="chat-container">
+                    <div class="chat-head">
+                        <label for="chek"><img id="chek-now" src=""></label>
+                        <button class="icon-btn logout-btn"><i class="fa fa-sign-out"></i>Logout</button>
+                    </div>
+                </div>
+
+                <!-- Tab Switcher -->
+                <div class="tab-switcher">
+                    <button id="chats-tab" class="tab-btn active-tab">
+                        <i class="fa fa-comments"></i> Chats
+                    </button>
+                    <button id="groups-tab" class="tab-btn">
+                        <i class="fa fa-users"></i> Groups
+                    </button>
+                </div>
+
+                <div class="chat-search">
+                    <form id="get-user" action="/" method="POST">
+                        <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
+                        <input type="text" class="search" id="auto-search-user" name="search"
+                            placeholder="Search or start a new chat ...">
+                    </form>
+                </div>
+                <div class="chat-description">
+                    <div id="search-results-container" class="chat-details"></div>
+                    <!-- Group List Container -->
+                    <div id="group-list-container" class="chat-details" style="display: none;"></div>
+                    <!-- Create Group Button -->
+                    <button id="create-group-btn" class="create-group-btn" style="display: none;">
+                        <i class="fa fa-plus-circle"></i> Create New Group
+                    </button>
+                </div>
+                <div class="chat-modal-container">
+                    <div class="chat-modal">
+                        <div class="profile-heading">
+                            <div class="profile-head">
+                                <label for="chek"><img id="chek-now" src="../chat-images/left-arrow.png"
+                                        style="filter: invert(100%) sepia(0%) saturate(7466%) hue-rotate(50deg) brightness(114%) contrast(98%);"></label>
+                                <h3>Profile</h3>
+                            </div>
+                        </div>
+                        <div class="profile-image">
+                            <div class="profile-image-con">
+                                <img src="">
+                                <div class="profile-overlay">
+                                    <i class="fa fa-camera"></i>
+                                </div>
+                                <input type="file" id="profile-pic-input" accept="image/*" style="display: none;">
+                            </div>
+                        </div>
+                        <div class="profile-name">
+                            <div class="profile-name-details">
+                                <h4>Your name</h4>
+                                <div class="title-details">
+                                    <h3>Name</h3>
+                                    <div class="title-details-img">
+                                        <button class="icon-btn"><img src="../chat-images/pencil.png"
+                                                style="filter: invert(51%) sepia(2%) saturate(111%) hue-rotate(318deg) brightness(99%) contrast(78%);"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-name">
+                            <div class="profile-name-details">
+                                <h4>About</h4>
+                                <div class="title-details">
+                                    <h3 id="about-text">Hey there! I am using ChatApp.</h3>
+                                    <div class="title-details-img">
+                                        <button class="icon-btn" id="edit-about-btn"><img
+                                                src="../chat-images/pencil.png"
+                                                style="filter: invert(51%) sepia(2%) saturate(111%) hue-rotate(318deg) brightness(99%) contrast(78%);"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-messages-container">
+                <input type="checkbox" id="message-toggle">
+                <div class="message-head">
+                    <div class="friend-details">
+                        <button class="back-to-search mobile-only" style="display: none;">
+                            <i class="fa fa-arrow-left"></i>
+                        </button>
+                        <label for="message-toggle"><img src=""></label>
+                        <div class="friend-contact">
+                            <h3></h3>
+                            <h4></h4>
+                        </div>
+                    </div>
+                    <div class="friend-name">
+                        <button class="icon-btn" id="video-call-btn" title="Video Call"><img
+                                src="../chat-images/camera.png"
+                                style="filter: invert(52%) sepia(11%) saturate(25%) hue-rotate(317deg) brightness(94%) contrast(82%);"></button>
+                        <button class="icon-btn" id="audio-call-btn" title="Audio Call"><img
+                                src="../chat-images/telephone.png"
+                                style="filter: invert(52%) sepia(11%) saturate(25%) hue-rotate(317deg) brightness(94%) contrast(82%);"></button>
+                        <div class="msg-dropdown-container">
+                            <button class="icon-btn msg-options-btn" id="chat-options-btn"
+                                onclick="document.getElementById('chat-menu').classList.toggle('show'); event.stopPropagation();"
+                                title="Options">
+                                <i class="fa fa-ellipsis-v" style="font-size: 18px; padding: 4px;"></i>
+                            </button>
+                            <div class="msg-dropdown-menu" id="chat-menu"
+                                style="top: 110%; bottom: auto; min-width: 150px;">
+                                <div class="msg-dropdown-item delete" id="clear-chat-btn">
+                                    <i class="fa fa-eraser"></i> Clear Chat
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-messages">
+                    <div id="chat-container"></div>
+                </div>
+                <!-- Typing indicator -->
+                <div id="typing-indicator" class="typing-indicator" style="display:none;">
+                    <div class="typing-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span class="typing-text">typing...</span>
+                </div>
+                <!-- Attach file preview -->
+                <div id="attach-preview" class="attach-preview" style="display:none;">
+                    <i class="fa fa-paperclip"></i>
+                    <span id="attach-name" class="attach-name">file.pdf</span>
+                    <button id="remove-attach" class="remove-attach-btn"><i class="fa fa-times"></i></button>
+                </div>
+                <div class="message-foot">
+                    <form action="." method="POST">
+                        <button type="button" id="attach-file-outer-btn" class="icon-btn"><img id="add"
+                                src="../chat-images/add.png"
+                                style="filter: invert(52%) sepia(11%) saturate(25%) hue-rotate(317deg) brightness(94%) contrast(82%);"></button>
+                        <input type="file" id="chat-file-input" style="display: none;"
+                            accept="image/*,.pdf,.doc,.docx,.xls,.xlsx,.txt,.zip,.rar">
+                        <input type="text" name="message" id="send-message" placeholder="Type a message">
+                        <button type="submit" id="submit"><i class="fa fa-send-o"></i></button>
+                    </form>
+                </div>
+                <div class="message-modal">
+                    <div class="message-heading">
+                        <label for="message-toggle"><img src="../chat-images/cancel.png"
+                                style="filter: invert(52%) sepia(11%) saturate(25%) hue-rotate(317deg) brightness(94%) contrast(82%);"></label>
+                        <h3>Contact info</h3>
+                    </div>
+                    <div class="message-image-details">
+                        <div class="img-con-details">
+                            <img src="">
+                        </div>
+                        <h3></h3>
+                        <h4></h4>
+
+                        <div class="message-icons">
+                            <div class="audio">
+                                <i class="fa fa-phone"></i>
+                                <h5>Audio</h5>
+                            </div>
+                            <div class="video">
+                                <i class="fa fa-video-camera"></i>
+                                <h5>Video</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message-description">
+                        <h3>About</h3>
+                        <h4></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Create Group Modal -->
+    <div id="create-group-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create New Group</h3>
+                <button id="close-group-modal" class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="group-name-input">Group Name</label>
+                    <input type="text" id="group-name-input" placeholder="Enter group name" class="modal-input">
+                </div>
+                <div class="form-group">
+                    <label>Add Members</label>
+                    <input type="text" id="group-member-search" placeholder="Search users to add..."
+                        class="modal-input">
+                    <div id="group-member-results" class="member-results"></div>
+                </div>
+                <div id="selected-members" class="selected-members"></div>
+                <button id="submit-group-btn" class="submit-group-btn">Create Group</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Call Modal -->
+    <div id="video-call-modal" class="video-call-modal" style="display: none;">
+        <div class="video-call-container">
+            <div class="video-grid">
+                <div class="video-wrapper">
+                    <video id="remote-video" autoplay playsinline></video>
+                    <span class="video-label">Remote</span>
+                </div>
+                <div class="video-wrapper local">
+                    <video id="local-video" autoplay playsinline muted></video>
+                    <span class="video-label">You</span>
+                </div>
+            </div>
+            <div class="call-status">
+                <span id="call-status-text"></span>
+            </div>
+            <div class="call-controls">
+                <button id="mute-audio-btn" class="call-control-btn control-active" title="Toggle Microphone">
+                    <i class="fa fa-microphone"></i>
+                </button>
+                <button id="toggle-camera-btn" class="call-control-btn control-active" title="Toggle Camera">
+                    <i class="fa fa-video-camera"></i>
+                </button>
+                <button id="end-call-btn" class="end-call-btn">
+                    <i class="fa fa-phone" style="transform: rotate(135deg);"></i> End Call
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Incoming Call Overlay -->
+    <div id="incoming-call-overlay" class="incoming-call-overlay" style="display: none;">
+        <div class="incoming-call-card">
+            <i class="fa fa-phone incoming-phone-icon"></i>
+            <h3>Incoming Call</h3>
+            <p id="caller-name"></p>
+            <div class="incoming-call-actions">
+                <button id="accept-call-btn" class="accept-call-btn">
+                    <i class="fa fa-phone"></i> Accept
+                </button>
+                <button id="reject-call-btn" class="reject-call-btn">
+                    <i class="fa fa-phone" style="transform: rotate(135deg);"></i> Reject
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../dist/chatPage.bundle.js?v=2"></script>
+    <script src="../dist/userService.bundle.js?v=2"></script>
+</body>
+
+</html>

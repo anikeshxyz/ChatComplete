@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <section id="container">
+        <div class="container">
+            <div class="title">
+                <h3>Log in</h3>
+                <h4>Login to your account to start chatting with your pals.</h4>
+            </div>
+            <div id="error-message">
+                <h4 id="error-text"></h4>
+            </div>
+            <div class="form">
+                <form id="login" onsubmit="return false;">
+                    <div class="box phone-otp-box">
+                        <input id="phoneNumber" type="text" name="phone_number" class="input-fields"
+                            placeholder="Enter your phone number" required>
+                        <button type="button" id="sendOtpBtn" class="otp-btn">Send OTP</button>
+                    </div>
+                    <div class="box otp-box" id="otpSection" style="display: none;">
+                        <input id="otpInput" type="text" maxlength="6" class="input-fields otp-input"
+                            placeholder="Enter 6-digit OTP">
+                    </div>
+                    <div id="otp-status" class="otp-status" style="display: none;"></div>
+                    <div class="box">
+                        <input type="submit" class="input-btn" value="Login">
+                    </div>
+                    <div class="btn-links">
+                        <h3>Don't have an account? <a href="signup.html">Signup</a></h3>
+                    </div>
+                </form>
+            </div>
+    </section>
+
+    <script src="../dist/loginPage.bundle.js"></script>
+</body>
+
+</html>

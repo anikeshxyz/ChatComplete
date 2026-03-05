@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <title>Sign up form </title>
+</head>
+
+<body>
+    <section id="container">
+        <div class="container">
+            <div class="title">
+                <h3>Sign up</h3>
+                <h4>Signup now to start chatting with your loved ones for free! </h4>
+            </div>
+            <div id="error-message">
+                <h4 id="error-text"></h4>
+            </div>
+            <div class="form">
+                <form id="signup" onsubmit="return false;">
+                    <div class="box">
+                        <input id="firstname" type="text" name="first_name" class="input-fields"
+                            placeholder="Enter your first name" required>
+                    </div>
+                    <div class="box">
+                        <input id="lastname" type="text" name="last_name" class="input-fields"
+                            placeholder="Enter your last name" required>
+                    </div>
+                    <div class="box">
+                        <input id="username" type="text" name="username" class="input-fields"
+                            placeholder="Enter your username" required>
+                    </div>
+                    <div class="box">
+                        <input id="email" type="text" name="email" class="input-fields" placeholder="Enter your email"
+                            required>
+                    </div>
+                    <div class="box phone-otp-box">
+                        <input id="phoneNumber" type="text" name="phone_number" class="input-fields"
+                            placeholder="Enter your phone number" required>
+                        <button type="button" id="sendOtpBtn" class="otp-btn">Send OTP</button>
+                    </div>
+                    <div class="box otp-box" id="otpSection" style="display: none;">
+                        <input id="otpInput" type="text" maxlength="6" class="input-fields otp-input"
+                            placeholder="Enter 6-digit OTP">
+                        <button type="button" id="verifyOtpBtn" class="otp-btn verify-btn">Verify</button>
+                    </div>
+                    <div id="otp-status" class="otp-status" style="display: none;"></div>
+                    <div class="box">
+                        <label for="profilePicture" class="profile-picture-label">
+                            <i class="fas fa-camera"></i> Upload Profile Picture
+                        </label>
+                        <input id="profilePicture" type="file" name="profilePicture" class="input-fields"
+                            accept="image/*" style="display: none;" />
+                        <div id="preview-container" style="display: none; margin-top: 10px;">
+                            <img id="preview-image" src="#" alt="Preview" style="max-width: 100px; max-height: 100px;">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <input id="password" type="password" name="password" class="input-fields"
+                            placeholder="Enter your password" required>
+                        <button type="button" id="togglePassword1" class="toggle-password">
+                            <i class="far fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="box">
+                        <input id="confirmPassword" type="password" name="confirm_password" class="input-fields"
+                            placeholder="Confirm your password" required>
+                        <button type="button" id="togglePassword2" class="toggle-password">
+                            <i class="far fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="box">
+                        <input type="submit" class="input-btn" value="Signup">
+                    </div>
+                    <div class="btn-links">
+                        <h3>Already have an account? <a href="login.html">Login</a></h3>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="../dist/signupPage.bundle.js"></script>
+</body>
+
+</html>

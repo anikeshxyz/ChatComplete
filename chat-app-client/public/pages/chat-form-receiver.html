@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/chat-form-receiver.css">
+    <title>Login form </title>
+</head>
+
+<body>
+    <section id="container">
+        <div class="container">
+            <div class="title">
+                <h3>Start chat</h3>
+                <h4>Input your correct details to pair with your pals.. </h4>
+            </div>
+            <div class="error">
+                <h4>Login to your account to start chatting with your pals</h4>
+            </div>
+            <div class="form">
+                <form action="/" method="POST">
+                    <div class="box">
+                        <input type="text" name="username" class="input-fields"
+                            placeholder="What is your username? ..." required>
+                    </div>
+                    <div class="box">
+                        <input type="text" name="name" class="input-fields"
+                            placeholder="Who do you wanna chat with? ..." required>
+                    </div>
+                    <div class="box">
+                        <input type="file" name="photo" class="input-fields" onchange="readURL(this)" accept="">
+                    </div>
+                    <div class="box">
+                        <input type="submit" class="input-btn" value="Enter">
+                    </div>
+                </form>
+            </div>
+    </section>
+</body>
+
+</html>
