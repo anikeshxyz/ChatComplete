@@ -1,8 +1,7 @@
-const { watch } = require("fs");
 const path = require("path");
 
 module.exports = {
-    mode: "development",
+    mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     entry: {
         loginPage: "./public/src/loginPage.js",
         signupPage: "./public/src/signupPage.js",
@@ -13,6 +12,5 @@ module.exports = {
         path: path.resolve(__dirname, "public/dist"),
         filename: "[name].bundle.js"
     },
-    watch: true,
-
+    watch: false,
 };
